@@ -35,7 +35,7 @@ initializer::initializer()
 #ifdef _WIN32
 		Py_SetPath(combinePaths({"","\\python37.zip","\\site-packages"}).c_str());
 #elif defined __APPLE__
-		Py_SetPath(combinePaths({ "","/python37.zip","/site-packages" },":").c_str());
+		Py_SetPath(combinePaths({"","/python37.zip","/site-packages","/lib-dynload"},":").c_str());
 #endif
 		Py_Initialize();
 
